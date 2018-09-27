@@ -1,6 +1,5 @@
 from mysnake.one_player_one_head import *
-from mysnake.two_player_two_head import TwoPlayerTwoHead
-from mysnake.snake.walled_field import WalledField
+from mysnake.menu_state import MenuState
 import pygame
 
 BLACK = (0, 0, 0)
@@ -16,7 +15,7 @@ pygame.display.set_caption("Snake")
 DONE = False
 CLOCK = pygame.time.Clock()
 
-manager = StateManager(TwoPlayerTwoHead(WalledField(60)))
+manager = StateManager(MenuState())
 
 while not DONE:
     for event in pygame.event.get():

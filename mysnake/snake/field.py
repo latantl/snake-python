@@ -34,7 +34,7 @@ class Field:
 
     def draw(self, screen: Surface):
         screen.fill(FIELD_COLORS[0])
-        s = Surface.get_height() // self.size
+        s = screen.get_height() // self.size
         for thing in self.things:
             thing.draw(screen, thing.loc.x * s, thing.loc.y * s, s)
 

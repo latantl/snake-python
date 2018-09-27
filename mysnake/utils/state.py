@@ -18,3 +18,7 @@ class State:
     # abstract
     def on_run(self):
         pass
+
+    def draw_string(self, screen: Surface, string, font, color, x: int, y: int):
+        label = font.render(string, 1, color)
+        screen.blit(label, (x, y))

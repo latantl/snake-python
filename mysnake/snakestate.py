@@ -46,10 +46,6 @@ class SnakeState(State):
         self.draw_string(screen, string, self.info_font, (255, 255, 255),
                          (screen.get_width() - str_width)// 2, int(screen.get_height() * 0.3))
 
-    def draw_string(self, screen: Surface, string, font, color, x: int, y: int):
-        label = font.render(string, 1, color)
-        screen.blit(label, (x, y))
-
     def on_run(self):
         if self.is_started and not self.is_over and not self.is_paused:
             if (pygame.time.get_ticks() - self.start) // self.delay > self.stepped:
