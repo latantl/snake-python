@@ -40,4 +40,5 @@ class MenuState(State):
                 color = (255, 255, 255)
             str_width, str_height = self.item_font.size(self.items[i])
             self.draw_string(screen, self.items[i], self.item_font, color,
-                             (screen.get_width() - str_width) // 2, int(screen.get_height() * (i + 1) * 0.2))
+                             (screen.get_width() - str_width) // 2,
+                             int(screen.get_height() * (i + 1) / (len(self.items) + 1) - str_height / 2))
