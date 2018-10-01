@@ -34,7 +34,6 @@ class MenuState(State):
     def draw(self, screen: Surface):
         self.field.draw(screen)
         for i in range(len(self.items)):
-            print(i)
             color = (0, 0, 0)
             if i == self.index:
                 color = (255, 255, 255)
